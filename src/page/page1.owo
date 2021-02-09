@@ -1,0 +1,50 @@
+<template lang="pug">
+.page-1
+  img.so.so-0(src="@|3.jpg|")
+  img.so.so-1(src="@|6.png|")
+  img.so.so-2(src="@|7.png|" o-animation="shrink" go="page2//scaleDown/scaleUpDown")
+  img.so.so-3(src="@|8.png|" o-animation="shrink" go="page3//scaleDown/scaleUpDown")
+  img.so.so-4(src="@|5.png|" o-animation="floatUpDownSmall")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.animate('slideInLeft', this.query('.so-2'), 400)
+      owo.animate('slideInRight', this.query('.so-3'), 400)
+      document.querySelector('video').play()
+      document.querySelector('.video-box').style.display = 'block'
+      
+    }
+  }
+</script>
+
+
+<style lang="less">
+.so-0 {
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+.so-1 {
+  left: 64px;
+  top: 199px;
+  z-index: 2;
+}
+.so-2 {
+  left: 66px;
+  top: 466px;
+  z-index: 3;
+}
+.so-3 {
+  left: 66px;
+  top: 743px;
+  z-index: 4;
+}
+.so-4 {
+  left: 0px;
+  top: 769px;
+  z-index: 5;
+  pointer-events: none;
+}
+</style>

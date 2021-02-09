@@ -1,0 +1,53 @@
+<template lang="pug">
+.video-box
+  video(object-fill="cover" src="http://flv4.people.com.cn/videofile7/pvmsvideo/2021/2/9/QuanMeiTiZhiZuoErBu-ZhangRui_96740d2f1be41adc77e827bef6b7195c.mp4" x5-video-orientation="portrait" preload="auto" playsinline="true" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-fullscreen="true" x5-video-player-type="h5")
+  .skip(o-tap="skip") 跳过
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      var vid = this.query("video");
+      vid.onended = function() {
+        document.querySelector('.video-box').style.display = 'none'
+        setTimeout(() => {
+          owo.script.music.play()
+        }, 0);
+      };
+    },
+    skip: function () {
+      this.query("video").pause()
+      document.querySelector('.video-box').style.display = 'none'
+      setTimeout(() => {
+        owo.script.music.play()
+      }, 0);
+    }
+  }
+</script>
+
+
+<style lang="less">
+.video-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: 1000;
+  display: none;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.skip {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  color: white;
+  font-size: 18px;
+}
+</style>

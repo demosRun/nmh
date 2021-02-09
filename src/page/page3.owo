@@ -1,0 +1,145 @@
+<template lang="pug">
+.page3
+  .so.so-0
+    img.so.so-1(src="@|xuanze-12.png|" o-tap="gxuanze('yudong')")
+    img.so.so-2(src="@|xuanze-11.png|" o-tap="gxuanze('shanxi')")
+    img.so.so-3(src="@|xuanze-10.png|" o-tap="gxuanze('henan')")
+    img.so.so-4(src="@|xuanze-9.png|" o-tap="gxuanze('zhoushan')")
+    img.so.so-5(src="@|xuanze-8.png|" o-tap="gxuanze('heilongjiang')")
+    img.so.so-6(src="@|xuanze-7.png|"  o-tap="gxuanze('sanjiang')")
+    img.so.so-7(src="@|xuanze-6.png|" o-tap="gxuanze('fujian')")
+    img.so.so-8(src="@|xuanze-5.png|" go="page1//scaleDown/scaleUpDown")
+</template>
+<script>
+module.exports = {
+  data: {
+    story: {
+      "yudong": [
+        "@|3-0.png|",
+        "@|3-1.png|",
+        "@|3-2.png|",
+      ],
+      "shanxi": [
+        "@|1-0.png|",
+        "@|1-1.png|",
+        "@|1-2.png|",
+      ],
+      "henan": [
+        "@|6-0.png|",
+        "@|6-1.png|",
+        "@|6-2.png|",
+      ],
+      "zhoushan": [
+        "@|5-0.png|",
+        "@|5-1.png|",
+        "@|5-2.png|",
+      ],
+      "heilongjiang": [
+        "@|4-0.png|",
+        "@|4-1.png|",
+        "@|4-2.png|",
+      ],
+      "sanjiang": [
+        "@|2-0.png|",
+        "@|2-1.png|",
+        "@|2-2.png|",
+      ],
+      "fujian": [
+        "@|0-0.png|",
+        "@|0-1.png|",
+        "@|0-2.png|",
+      ],
+    }
+  },
+  gxuanze: function (name) {
+    // @|title-yudong.png| @|title-shanxi.png| @|title-henan.png| @|title-zhoushan.png| @|title-heilongjiang.png| @|title-sanjiang.png| @|title-fujian.png|
+    document.querySelector('.page4 .so-6').src = `./static/resource/title-${name}.png`
+    let newHtml = ''
+    this.data.story[name].forEach(element => {
+      newHtml += `<div class="swiper-slide"><img src="${element}"></div>`
+    });
+    document.querySelector('.page4 .swiper-wrapper').innerHTML = newHtml
+    owo.go('page4//scaleDown/scaleUpDown')
+    switch (name) {
+      case 'fujian':
+        owo.script.page4.data.voteid = 72660
+        break;
+      case 'shanxi':
+        owo.script.page4.data.voteid = 72661
+        break;
+      case 'sanjiang':
+        owo.script.page4.data.voteid = 72662
+        break;
+      case 'yudong':
+        owo.script.page4.data.voteid = 72663
+        break;
+      case 'heilongjiang':
+        owo.script.page4.data.voteid = 72664
+        break;
+      case 'zhoushan':
+        owo.script.page4.data.voteid = 72665
+        break;
+      case 'henan':
+        owo.script.page4.data.voteid = 72666
+        break;
+    }
+  }
+}
+</script>
+<style lang="less">
+.page3 {
+  background-image: url('@|hbxz-3.jpg|');
+}
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 376px;
+  top: 431px;
+  z-index: -1;
+}
+.so-2 {
+  left: 65px;
+  top: 202px;
+  z-index: -2;
+}
+.so-3 {
+  left: 457px;
+  top: 904px;
+  z-index: -3;
+}
+.so-4 {
+  left: 110px;
+  top: 703px;
+  z-index: -4;
+}
+.so-5 {
+  left: 63px;
+  top: 964px;
+  z-index: -5;
+}
+.so-6 {
+  left: 301px;
+  top: 205px;
+  z-index: -6;
+}
+.so-7 {
+  left: 65px;
+  top: 457px;
+  z-index: -7;
+}
+.so-8 {
+  left: 254px;
+  top: 1243px;
+  z-index: 8;
+}
+.so-9 {
+  left: 0px;
+  top: 0px;
+  z-index: -9;
+}
+</style>

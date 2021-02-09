@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <!-- 页面的元信息 -->
+  <title>{TAG_14226_TAG}</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="filetype" content="1" />
+  <meta name="publishedtype" content="1" />
+  <meta name="pagetype" content="2" />
+  <meta name="screen-orientation" content="landscape" />
+  <meta name="x5-orientation" content="landscape" />
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="browsermode" content="application" />
+  <meta name="x5-page-mode" content="app" />
+
+  <!-- 页面主样式文件 -->
+  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.core.css">
+
+  <!-- 附属css文件 -->
+  <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
+  <link rel="stylesheet" href="http://cunchu.site/owo/style/swiper-6.4.11.min.css" charset="utf-8">
+
+</head>
+
+<body>
+  <div class="scale-box">
+    <!-- 页面[loading]-->
+    <div class="loading-box page" template="loading" style="display: none;">
+      <img class="loading-text" src="./static/resource/loading-title.png">
+      <img class="loading" src="./static/resource/loading.gif">
+      <div class="loading-bar">
+        <div class="num-bar"></div>
+      </div>
+      <span class="text">Loading</span>
+      <div class="num">0%</div>
+      <img class="enter" src="./static/resource/enter.png" go="page1////true" o-animation="shrink">
+    </div>
+    <!-- 页面[page1]-->
+    <div class="page-1 page" template="page1" style="display: none;">
+      <img class="so so-0" src="./static/resource/3.jpg">
+      <img class="so so-1" src="./static/resource/6.png">
+      <img class="so so-2" src="./static/resource/7.png" o-animation="shrink" go="page2//scaleDown/scaleUpDown">
+      <img class="so so-3" src="./static/resource/8.png" o-animation="shrink" go="page3//scaleDown/scaleUpDown">
+      <img class="so so-4" src="./static/resource/5.png" o-animation="floatUpDownSmall">
+    </div>
+    <!-- 页面[page2]-->
+    <div class="page2 page" template="page2" style="display: none;">
+      <img class="so so-0" src="./static/resource/hbxz-3.jpg">
+      <img class="so so-1" src="./static/resource/hbxz-4.png">
+      <img class="so so-2" src="./static/resource/hbxz-5.png">
+      <img class="so so-3" src="./static/resource/hbxz-6.png">
+      <select class="so so-4">
+        <option value="0">等闲识得冬风面，万紫千红总是春。</option>
+        <option value="1">寒随一夜去，春逐五更来。</option>
+        <option value="2">千门万户曈曈日，总把新桃换旧符。</option>
+        <option value="3">生盆火烈轰鸣竹，守岁筵开听颂椒。</option>
+        <option value="4">愿新春已后，吉吉利利。百事都如意。</option>
+      </select>
+      <img class="so so-5" src="./static/resource/hbxz-25.png" o-tap="showHaiBao">
+      <img class="so so-6" src="./static/resource/hbxz-26.png" go="page1//scaleDown/scaleUpDown">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./static/resource/show-0-0.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="./static/resource/show-0-1.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="./static/resource/show-0-2.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="./static/resource/show-0-3.png">
+          </div>
+          <div class="swiper-slide">
+            <img src="./static/resource/show-0-4.png">
+          </div>
+        </div>
+      </div>
+      <div class="haibao-show">
+        <img class="show" src="./static/resource/show.jpg">
+        <img class="close" src="./static/resource/close.png" o-tap="showHaiBao">
+        <div class="info-text" o-animation="flicker">长按海报保存分享</div>
+      </div>
+    </div>
+    <!-- 页面[page3]-->
+    <div class="page3 page" template="page3" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/xuanze-12.png" o-tap="gxuanze('yudong')">
+        <img class="so so-2" src="./static/resource/xuanze-11.png" o-tap="gxuanze('shanxi')">
+        <img class="so so-3" src="./static/resource/xuanze-10.png" o-tap="gxuanze('henan')">
+        <img class="so so-4" src="./static/resource/xuanze-9.png" o-tap="gxuanze('zhoushan')">
+        <img class="so so-5" src="./static/resource/xuanze-8.png" o-tap="gxuanze('heilongjiang')">
+        <img class="so so-6" src="./static/resource/xuanze-7.png" o-tap="gxuanze('sanjiang')">
+        <img class="so so-7" src="./static/resource/xuanze-6.png" o-tap="gxuanze('fujian')">
+        <img class="so so-8" src="./static/resource/xuanze-5.png" go="page1//scaleDown/scaleUpDown">
+      </div>
+    </div>
+    <!-- 页面[page4]-->
+    <div class="page4 page" template="page4" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/887.png" go="page3//scaleDown/scaleUpDown">
+        <img class="so so-2" src="./static/resource/1221.png">
+        <img class="so so-4 elementToAnimate" src="./static/resource/960.png">
+        <img class="so so-5" src="./static/resource/964.png">
+        <img class="so so-6" src="./static/resource/395.png">
+        <img class="so so-7" src="./static/resource/953.jpg">
+        <div class="swiper-container2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./static/resource/0-0.png">
+            </div>
+            <div class="swiper-slide">
+              <img src="./static/resource/0-1.png">
+            </div>
+            <div class="swiper-slide">
+              <img src="./static/resource/0-2.png">
+            </div>
+          </div>
+        </div>
+        <div class="toupiao-num">123</div>
+      </div>
+    </div>
+  </div>
+  <!-- 插件[video]-->
+  <div class="video-box owo-block" template="video" style="display: none;">
+    <video object-fill="cover" src="http://flv4.people.com.cn/videofile7/pvmsvideo/2021/2/9/QuanMeiTiZhiZuoErBu-ZhangRui_96740d2f1be41adc77e827bef6b7195c.mp4" x5-video-orientation="portrait" preload="auto" playsinline="true" webkit-playsinline="true" x-webkit-airplay="true" x5-video-player-fullscreen="true" x5-video-player-type="h5"></video>
+    <div class="skip" o-tap="skip">跳过</div>
+  </div>
+  <!-- 插件[music]-->
+  <div class="music-menu owo-block" template="music" style="display: none;">
+    <img class="music-icon" src="https://cunchu.site/ozzx/resource/music.png" o-tap="switchPlay">
+  </div>
+
+  <!-- 框架script文件 -->
+  <script src="./static/js/owo.core.js" type="text/javascript" charset="UTF-8"></script>
+  <script type="text/javascript" charset="UTF-8">
+    owo.script = {
+      "loading": {
+        "data": {
+          "imgList": ["./static/resource/show.jpg", "./static/resource/953.jpg", "./static/resource/hbxz-3.jpg", "./static/resource/3.jpg", "./static/resource/0-2.png", "./static/resource/5.png", "./static/resource/6-1.png", "./static/resource/5-2.png", "./static/resource/3-1.png", "./static/resource/0-1.png", "./static/resource/0-0.png", "./static/resource/6-0.png", "./static/resource/3-2.png", "./static/resource/3-0.png", "./static/resource/4-1.png", "./static/resource/4-0.png", "./static/resource/5-0.png", "./static/resource/4-2.png", "./static/resource/1-2.png", "./static/resource/2-2.png", "./static/resource/2-1.png", "./static/resource/6-2.png", "./static/resource/5-1.png", "./static/resource/1-1.png", "./static/resource/2-0.png", "./static/resource/1-0.png", "./static/resource/xuanze-12.png", "./static/resource/7.png", "./static/resource/8.png", "./static/resource/xuanze-7.png", "./static/resource/xuanze-8.png", "./static/resource/xuanze-6.png", "./static/resource/xuanze-10.png", "./static/resource/xuanze-9.png", "./static/resource/xuanze-11.png", "./static/resource/6.png", "./static/resource/title-henan.png", "./static/resource/title-yudong.png", "./static/resource/title-sanjiang.png", "./static/resource/395.png", "./static/resource/title-fujian.png", "./static/resource/title-heilongjiang.png", "./static/resource/title-zhoushan.png", "./static/resource/title-shanxi.png", "./static/resource/1221.png", "./static/resource/887.png", "./static/resource/hbxz-4.png", "./static/resource/hbxz-24.png", "./static/resource/xuanze-5.png", "./static/resource/hbxz-25.png", "./static/resource/hbxz-26.png", "./static/resource/964.png", "./static/resource/close.png", "./static/resource/960.png", "./static/resource/hbxz-6.png", "./static/resource/hbxz-5.png"]
+        },
+        "show": function show() {
+          var _this = this;
+
+          var mum = owo.query('.num')[0];
+          var numBar = owo.query('.num-bar')[0];
+          this.preloadImages(this.data.imgList, function(e) {
+            setTimeout(function() {
+              // owo.go('page1////true')
+              _this.query('.enter').style.display = 'block';
+            }, 500);
+          }, function(num) {
+            numBar.style.width = num + '%';
+            mum.innerHTML = num + '%';
+          });
+        },
+        "preloadImage": function preloadImage(src, successFn) {
+          var image = new Image();
+          image.src = src;
+
+          image.onload = function() {
+            successFn && successFn(src);
+          };
+
+          image.onerror = function(error) {
+            successFn && successFn(src);
+          };
+        },
+        "preloadImages": function preloadImages(srcs, doneFn, progressFn) {
+          var _this2 = this;
+
+          if (!Array.isArray(srcs)) {
+            console.log('第一个参数只能是一个数组');
+          } else {
+            var allCount = srcs.length;
+            var doneCount = 0;
+            srcs.forEach(function(srcItem) {
+              _this2.preloadImage(srcItem, function() {
+                doneCount++;
+                progressFn && progressFn(Math.ceil(100 * doneCount / allCount));
+
+                if (doneCount === allCount) {
+                  doneFn && doneFn();
+                }
+              });
+            });
+          }
+        }
+      },
+      "page1": {
+        "created": function created() {
+          owo.animate('slideInLeft', this.query('.so-2'), 400);
+          owo.animate('slideInRight', this.query('.so-3'), 400);
+          document.querySelector('video').play();
+          document.querySelector('.video-box').style.display = 'block';
+        }
+      },
+      "page2": {
+        "data": {
+          "haibaoShow": false,
+          "swiper": null
+        },
+        "created": function created() {
+          this.data.swiper = new Swiper('.swiper-container', {
+            // loop: true,
+            navigation: {
+              nextEl: '.page2 .so-3',
+              prevEl: '.page2 .so-2'
+            }
+          });
+        },
+        "showHaiBao": function showHaiBao() {
+          // ./static/resource/show-0-0.png ./static/resource/show-0-1.png ./static/resource/show-0-2.png ./static/resource/show-0-3.png ./static/resource/show-0-4.png ./static/resource/show-1-0.png ./static/resource/show-1-1.png ./static/resource/show-1-2.png ./static/resource/show-1-3.png ./static/resource/show-1-4.png ./static/resource/show-2-0.png ./static/resource/show-2-1.png ./static/resource/show-2-2.png ./static/resource/show-2-3.png ./static/resource/show-2-4.png ./static/resource/show-3-0.png ./static/resource/show-3-1.png ./static/resource/show-3-2.png ./static/resource/show-3-3.png ./static/resource/show-3-4.png ./static/resource/show-4-0.png ./static/resource/show-4-1.png ./static/resource/show-4-2.png ./static/resource/show-4-3.png ./static/resource/show-4-4.png 
+          var checkData = this.query('.so-4').value;
+          console.log(this.data.swiper.activeIndex);
+          var activeInd = this.data.swiper.activeIndex;
+          this.data.haibaoShow = !this.data.haibaoShow;
+
+          if (this.data.haibaoShow) {
+            console.log("./static/resource/show-" + checkData + "-" + activeInd + ".png");
+            this.query('.haibao-show .show').src = "./static/resource/show-" + checkData + "-" + activeInd + ".png";
+            this.query('.haibao-show').style.display = 'block';
+          } else {
+            this.query('.haibao-show').style.display = 'none';
+          }
+        }
+      },
+      "page3": {
+        "data": {
+          "story": {
+            "yudong": ["./static/resource/3-0.png", "./static/resource/3-1.png", "./static/resource/3-2.png"],
+            "shanxi": ["./static/resource/1-0.png", "./static/resource/1-1.png", "./static/resource/1-2.png"],
+            "henan": ["./static/resource/6-0.png", "./static/resource/6-1.png", "./static/resource/6-2.png"],
+            "zhoushan": ["./static/resource/5-0.png", "./static/resource/5-1.png", "./static/resource/5-2.png"],
+            "heilongjiang": ["./static/resource/4-0.png", "./static/resource/4-1.png", "./static/resource/4-2.png"],
+            "sanjiang": ["./static/resource/2-0.png", "./static/resource/2-1.png", "./static/resource/2-2.png"],
+            "fujian": ["./static/resource/0-0.png", "./static/resource/0-1.png", "./static/resource/0-2.png"]
+          }
+        },
+        "gxuanze": function gxuanze(name) {
+          // ./static/resource/title-yudong.png ./static/resource/title-shanxi.png ./static/resource/title-henan.png ./static/resource/title-zhoushan.png ./static/resource/title-heilongjiang.png ./static/resource/title-sanjiang.png ./static/resource/title-fujian.png
+          document.querySelector('.page4 .so-6').src = "./static/resource/title-" + name + ".png";
+          var newHtml = '';
+          this.data.story[name].forEach(function(element) {
+            newHtml += "<div class=\"swiper-slide\"><img src=\"" + element + "\"></div>";
+          });
+          document.querySelector('.page4 .swiper-wrapper').innerHTML = newHtml;
+          owo.go('page4//scaleDown/scaleUpDown');
+
+          switch (name) {
+            case 'fujian':
+              owo.script.page4.data.voteid = 72660;
+              break;
+
+            case 'shanxi':
+              owo.script.page4.data.voteid = 72661;
+              break;
+
+            case 'sanjiang':
+              owo.script.page4.data.voteid = 72662;
+              break;
+
+            case 'yudong':
+              owo.script.page4.data.voteid = 72663;
+              break;
+
+            case 'heilongjiang':
+              owo.script.page4.data.voteid = 72664;
+              break;
+
+            case 'zhoushan':
+              owo.script.page4.data.voteid = 72665;
+              break;
+
+            case 'henan':
+              owo.script.page4.data.voteid = 72666;
+              break;
+          }
+        }
+      },
+      "page4": {
+        "data": {
+          "voteid": 72660,
+          "num": 0
+        },
+        "created": function created() {
+          var _this3 = this;
+
+          owo.tool.heart(this.query('.so-2'), function(e) {
+            $.ajax({
+              type: "get",
+              voteId: _this3.data.voteid,
+              url: "https://littlepoll.people.com.cn/button/index.php/cip/button/713/" + _this3.data.voteid,
+              //每一个投票对应一个type的值
+              dataType: "json",
+              data: "jsonCallback=?",
+              cache: false,
+              success: function success(data) {
+                console.log(data);
+                _this3.data.num += 1;
+                $(".toupiao-num").text(_this3.data.num);
+              }
+            });
+          });
+        },
+        "show": function show() {
+          new Swiper('.swiper-container2', { // loop: true,
+          });
+          console.log(numList, this.data.voteid);
+          this.data.num = numList[this.data.voteid] || 1324;
+          $(".toupiao-num").text(this.data.num);
+        }
+      },
+      "video": {
+        "created": function created() {
+          var vid = this.query("video");
+
+          vid.onended = function() {
+            document.querySelector('.video-box').style.display = 'none';
+            setTimeout(function() {
+              owo.script.music.play();
+            }, 0);
+          };
+        },
+        "skip": function skip() {
+          this.query("video").pause();
+          document.querySelector('.video-box').style.display = 'none';
+          setTimeout(function() {
+            owo.script.music.play();
+          }, 0);
+        }
+      },
+      "music": {
+        "data": {
+          "music": null,
+          "musicIsPlay": false
+        },
+        "switchPlay": function switchPlay() {
+          this.data.musicIsPlay ? this.pause() : this.play();
+        },
+        "play": function play() {
+          console.log('播放音乐');
+
+          if (!this.data.musicIsPlay) {
+            this.data.musicIsPlay = true;
+            this.data.music = new Audio("./static/resource/music.mp3"); // this.data.music.volume = 0.2
+
+            this.data.music.loop = true;
+            this.data.music.play();
+            var icon = document.getElementsByClassName('music-icon')[0];
+            icon.src = 'https://cunchu.site/ozzx/resource/music.png';
+            icon.classList.add('active');
+          }
+        },
+        "pause": function pause() {
+          if (this.data.musicIsPlay) {
+            this.data.musicIsPlay = false;
+            this.data.music.pause();
+            var icon = document.getElementsByClassName('music-icon')[0];
+            icon.src = 'https://cunchu.site/ozzx/resource/music.png';
+            icon.classList.remove('active');
+          }
+        }
+      }
+    };
+  </script>
+
+  <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="https://cunchu.site/owo/plug/autoScale.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="http://cunchu.site/owo/script/swiper-6.4.11.min.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/main.js" type="text/javascript" charset="UTF-8"></script>
+
+  <script src="./static/js/heart.js" type="text/javascript" charset="UTF-8"></script>
+</body>
+
+</html>

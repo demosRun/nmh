@@ -1,0 +1,145 @@
+<template lang="pug">
+.page4
+  .so.so-0
+    img.so.so-1(src="@|887.png|" go='page3//scaleDown/scaleUpDown')
+    img.so.so-2(src="@|1221.png|")
+    img.so.so-4.elementToAnimate(src="@|960.png|")
+    img.so.so-5(src="@|964.png|")
+    img.so.so-6(src="@|395.png|")
+    img.so.so-7(src="@|953.jpg|")
+    //- 轮播图
+    .swiper-container2
+      .swiper-wrapper
+        .swiper-slide
+          img(src="@|0-0.png|")
+        .swiper-slide
+          img(src="@|0-1.png|")
+        .swiper-slide
+          img(src="@|0-2.png|")
+    .toupiao-num 123
+</template>
+<script>
+module.exports = {
+  data: {
+    voteid: 72660,
+    num: 0
+  },
+  created: function () {
+    owo.tool.heart(this.query('.so-2'), (e) => {
+      $.ajax({
+        type: "get",
+        voteId: this.data.voteid,
+        url: "https://littlepoll.people.com.cn/button/index.php/cip/button/713/" + this.data.voteid,//每一个投票对应一个type的值
+        dataType: "json",
+        data: "jsonCallback=?",
+        cache: false,
+        success: (data) => {
+          console.log(data)
+          this.data.num += 1
+          $(".toupiao-num").text(this.data.num);
+        }
+      })
+    })
+  },
+  show: function () {
+    new Swiper('.swiper-container2', {
+      // loop: true,
+    })
+    console.log(numList, this.data.voteid)
+    this.data.num = numList[this.data.voteid] || 1324
+    $(".toupiao-num").text(this.data.num);
+  }
+}
+</script>
+<style lang="less">
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 434px;
+  top: 1025px;
+  z-index: 2;
+}
+.so-2 {
+  left: 142px;
+  top: 1025px;
+  z-index: 2;
+}
+.so-3 {
+  left: 86px;
+  top: 471px;
+  z-index: -3;
+}
+.so-4 {
+  left: 266px;
+  top: 1259px;
+  z-index: -4;
+  
+}
+.so-5 {
+  left: 242px;
+  top: 1267px;
+  z-index: -5;
+}
+.so-6 {
+  left: 101px;
+  top: 187px;
+  z-index: -6;
+}
+.so-7 {
+  left: 0px;
+  top: 0px;
+  z-index: -7;
+}
+.swiper-container2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 470px;
+  margin: auto;
+  height: 500px;
+  .swiper-slide {
+    position: relative;
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0px;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+}
+
+@keyframes lrani {
+    0%{
+      transform: rotate(0deg) translateX(0px);
+    }
+    50%{
+      transform: rotate(0deg) translateX(200px);
+    }
+    100%{
+      transform: rotate(0deg) translateX(0);
+    }
+}
+
+.elementToAnimate {
+  animation: lrani 20s infinite 0s linear;
+}
+.toupiao-num {
+  position: absolute;
+  left: 170px;
+  top: 1102px;
+  color: white;
+  width: 100px;
+  text-align: center;
+  font-size: 26px;
+  user-select: none;
+  pointer-events: none;
+  z-index: 9;
+}
+</style>

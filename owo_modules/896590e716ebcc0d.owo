@@ -1,0 +1,187 @@
+<template lang="pug">
+.loading-box
+  img.loading-text(src="@|loading-title.png|")
+  img.loading(src="@|loading.gif|")
+  .loading-bar
+    .num-bar
+  span.text Loading
+  .num 0%
+  img.enter(src="@|enter.png|" go="page1////true" o-animation="shrink")
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      imgList: [
+        "@|show.jpg|",
+        "@|953.jpg|",
+        "@|hbxz-3.jpg|",
+        "@|3.jpg|",
+        "@|0-2.png|",
+        "@|5.png|",
+        "@|6-1.png|",
+        "@|5-2.png|",
+        "@|3-1.png|",
+        "@|0-1.png|",
+        "@|0-0.png|",
+        "@|6-0.png|",
+        "@|3-2.png|",
+        "@|3-0.png|",
+        "@|4-1.png|",
+        "@|4-0.png|",
+        "@|5-0.png|",
+        "@|4-2.png|",
+        "@|1-2.png|",
+        "@|2-2.png|",
+        "@|2-1.png|",
+        "@|6-2.png|",
+        "@|5-1.png|",
+        "@|1-1.png|",
+        "@|2-0.png|",
+        "@|1-0.png|",
+        "@|xuanze-12.png|",
+        "@|7.png|",
+        "@|8.png|",
+        "@|xuanze-7.png|",
+        "@|xuanze-8.png|",
+        "@|xuanze-6.png|",
+        "@|xuanze-10.png|",
+        "@|xuanze-9.png|",
+        "@|xuanze-11.png|",
+        "@|6.png|",
+        "@|title-henan.png|",
+        "@|title-yudong.png|",
+        "@|title-sanjiang.png|",
+        "@|395.png|",
+        "@|title-fujian.png|",
+        "@|title-heilongjiang.png|",
+        "@|title-zhoushan.png|",
+        "@|title-shanxi.png|",
+        "@|1221.png|",
+        "@|887.png|",
+        "@|hbxz-4.png|",
+        "@|hbxz-24.png|",
+        "@|xuanze-5.png|",
+        "@|hbxz-25.png|",
+        "@|hbxz-26.png|",
+        "@|964.png|",
+        "@|close.png|",
+        "@|960.png|",
+        "@|hbxz-6.png|",
+        "@|hbxz-5.png|",
+      ]
+    },
+    show: function () {
+      const mum = owo.query('.num')[0]
+      const numBar = owo.query('.num-bar')[0]
+      this.preloadImages(this.data.imgList, (e) => {
+        setTimeout(() => {
+          // owo.go('page1////true')
+          this.query('.enter').style.display = 'block'
+        }, 500)
+      }, (num) => {
+        numBar.style.width = num + '%'
+        mum.innerHTML = num + '%'
+      })
+    },
+    preloadImage: function (src, successFn) {
+      var image = new Image()
+      image.src = src
+      image.onload = function () {
+        successFn && successFn(src)
+      }
+      image.onerror = function (error) {
+        successFn && successFn(src)
+      }
+    },
+    preloadImages: function (srcs, doneFn, progressFn) {
+      if (!Array.isArray(srcs)) {
+        console.log('第一个参数只能是一个数组')
+      } else {
+        var allCount = srcs.length
+        var doneCount = 0
+        srcs.forEach((srcItem) => {
+          this.preloadImage(srcItem, function () {
+            doneCount++
+            progressFn && progressFn(Math.ceil(100 * doneCount / allCount))
+            if (doneCount === allCount) {
+              doneFn && doneFn()
+            }
+          })
+        })
+      }
+    }
+  }
+</script>
+
+
+<style lang="less">
+.loading-box {
+  width: 100%;
+  height: 100%;
+  background-color: #407197;
+}
+.loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -22%;
+  bottom: 0;
+  margin: auto;
+  width: 69%;
+}
+.loading-bar {
+  position: absolute;
+  top: -4%;
+  bottom: 0%;
+  height: 18px;
+  background-color: #35648a;
+  width: 50%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border-radius: 24px;
+  padding: 5px;
+  box-shadow: 2px 3px 9px #5d739c;
+  border: 4px solid #f2f2f2;
+}
+.num-bar {
+  background-color: #f2f2f2;
+  height: 18px;
+  border-radius: 18px;
+  width: 0%;
+  transition: width 0.5s;
+}
+.num, .text {
+  position: absolute;
+  top: 0%;
+  bottom: -8%;
+  margin: auto;
+  line-height: 50px;
+  height: 50px;
+  font-size: 36px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.text {
+  bottom: -14%;
+}
+.enter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 425px;
+  display: none;
+}
+.loading-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 280px;
+  margin: auto;
+}
+</style>
+ 
